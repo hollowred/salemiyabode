@@ -6,7 +6,7 @@ import {RiAwardFill} from 'react-icons/ri'
 const About = () => {
   return (
     <section id ="about">
-      <h5>Just A Few Things</h5>
+      <h5>Get To Know</h5>
       <h2>About Me</h2>
 
       <div className="container about__container">
@@ -23,7 +23,9 @@ const About = () => {
               <small> 3+ Years Working</small>
             </article>
           </div>
-          <p>I am a software engineer who is passionate about clean and efficient design. My skill set is built around collaboration whether that be directing a team or boosting an idea to its full potential. As an engineer, I am determined to execute and enhance the customer's experience. I am flexible and centralize new information that will make me a strengthened developer.</p>
+          <p>
+            I am a software engineer who is passionate about clean and efficient design. My skill set is built around collaboration whether that be directing a team or boosting an idea to its full potential. As an engineer, I am determined to execute and enhance the customer's experience. I am flexible and centralize new information that will make me a strengthened developer.
+          </p>
           <a href="#contact" className='btn btn-primary'>Let's Talk</a>
         </div> 
       </div>  
