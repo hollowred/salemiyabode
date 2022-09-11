@@ -2,6 +2,16 @@ import React from 'react'
 import './portfolio.css'
 import IMG1 from '../../assets/portfolio1.jpg'
 
+const data = [
+  {
+    id: 1,
+    image: IMG1,
+    title: 'Endangered Species',
+    github: 'https://github.com/letan1123/Project_4_frontend',
+    demo: 'https://pacific-beyond-27489.herokuapp.com/'
+  }
+]
+
 const Portfolio = () => {
   return (
     <section id="portfolio">
@@ -9,14 +19,22 @@ const Portfolio = () => {
       <h2>Portfolio</h2>
 
       <div className='container portfolio__container'>
-        <article className='portfolio__item'>
-          <div className="portfolio__item-image">
-            <img src={IMG1} alt="" />
-          </div>
-          <h3>Portfolio Item Title</h3>
-          <a href="https://github.com" className="btn" target='_blank'>Github</a>
-          <a href="https://pacific-beyond-27489.herokuapp.com/" className="btn btn-primary" target='_blank'>Live Demo</a>
-        </article>
+       {
+        data.map(({id, image, title, github, demo}) => {
+          return (
+            <article key={id} className='portfolio__item'>
+            <div className="portfolio__item-image">
+              <img src={image} alt={title} />
+            </div>
+            <h3>Portfolio Item Title</h3>
+            <div className='portfolio__item-cta'>
+              <a href={github} className="btn" target='_blank'>Github</a>
+              <a href={demo} className="btn btn-primary" target='_blank'>Live Demo</a>
+            </div>  
+          </article>
+          )
+        })
+       }
       </div>
     </section>
   )
